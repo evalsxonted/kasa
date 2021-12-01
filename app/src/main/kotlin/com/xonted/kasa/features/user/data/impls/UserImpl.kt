@@ -46,7 +46,7 @@ class UserImpl(
         } catch (e: Exception) {
             UseCaseResult.Failure(
                 messageToDev = e.message + "   " + e.stackTraceToString(),
-                messageToShow = "error inserting user"
+                messageToShow = "error deleting user"
             )
         }
     }

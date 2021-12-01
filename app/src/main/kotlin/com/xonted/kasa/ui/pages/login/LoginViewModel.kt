@@ -13,7 +13,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.xonted.kasa.core.UseCaseResult
 import com.xonted.kasa.core.errors.HandleFailure
-import com.xonted.kasa.db
+import com.xonted.kasa.features.user.data.datasource.UserDatabase
 import com.xonted.kasa.features.user.data.impls.UserImpl
 import com.xonted.kasa.features.user.domain.entities.MyUser
 import com.xonted.kasa.features.user.domain.entities.MyUserImp
@@ -26,6 +26,7 @@ import java.lang.Exception
 class LoginViewModel(
     private val navigateToHome: ()->Unit,
     private val scaffoldState: ScaffoldState,
+    private val db: UserDatabase
 ) : ViewModel() {
     var wait: Boolean by mutableStateOf(false)
     val phoneViewModel: InputViewModel = InputViewModel(

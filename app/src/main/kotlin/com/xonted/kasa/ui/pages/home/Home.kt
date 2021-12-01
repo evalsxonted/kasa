@@ -6,9 +6,11 @@ import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import com.xonted.kasa.features.accounts.data.datasource.AccountDatabase
 
 @Composable
 fun Home(
+    dbAccount : AccountDatabase,
     vm: HomeViewModel = HomeViewModel()
 ) {
     Scaffold {

@@ -7,6 +7,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.xonted.kasa.features.user.data.datasource.UserDatabase
 import com.xonted.kasa.ui.components.input.Input
 import com.xonted.kasa.ui.theme.color1
 import com.xonted.kasa.ui.theme.color5
@@ -16,9 +17,11 @@ import com.xonted.kasa.ui.theme.color5
 fun Login(
     scaffoldState: ScaffoldState = rememberScaffoldState(),
     navigateToHome: ()->Unit,
+    dbUser: UserDatabase,
     vm: LoginViewModel = LoginViewModel(
         navigateToHome,
         scaffoldState,
+        dbUser
     )
 ) {
 
